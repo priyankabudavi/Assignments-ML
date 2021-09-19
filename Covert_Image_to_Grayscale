@@ -1,0 +1,79 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 28 15:16:04 2021
+
+@author: Priyanka Budavi
+"""
+import cv2
+import matplotlib.pyplot as plt 
+
+#read  the image
+banana_image = cv2.imread('Image0.jpg')
+apple_image = cv2.imread('Image1.jpg')
+Guava_image = cv2.imread('Image2.jpg')
+
+plt.imshow(banana_image[:,:,1])
+
+#covert banana to grayscale
+banana_gray = cv2.cvtColor(banana_image, cv2.COLOR_BGRA2GRAY)
+
+#Write to another file the converted gray image
+cv2.imwrite('Grey_Image0.jpg', banana_gray)
+
+#Get the dimensions
+dimensions = banana_image.shape
+height = banana_image.shape[0]
+width = banana_image.shape[1]
+channels = banana_image.shape[2]
+
+#Printing the dimensions
+print("Dimensions of Banana :")
+print('Image Dimension    : ',dimensions)  
+print('Image Height       : ',height)  
+print('Image Width        : ',width)  
+print('Number of Channels : ',channels)  
+
+plt.imshow(apple_image[:,:,0])
+
+#covert apple to grayscale
+apple_gray = cv2.cvtColor(apple_image, cv2.COLOR_BGRA2GRAY)
+
+#Write to another file the converted gray image
+cv2.imwrite('Grey_Image1.jpg', apple_gray)
+
+#Get the dimensions
+dimensions = apple_image.shape
+height = apple_image.shape[0]
+width = apple_image.shape[1]
+channels = apple_image.shape[2]
+
+#Printing the dimensions
+print("Dimensions of Apple :")
+print('Image Dimension    : ',dimensions)  
+print('Image Height       : ',height)  
+print('Image Width        : ',width)  
+print('Number of Channels : ',channels)  
+ 
+ 
+
+plt.imshow(Guava_image[:,:,1])
+
+#covert apple to grayscale
+Guava_gray = cv2.cvtColor(Guava_image, cv2.COLOR_BGRA2GRAY)
+
+#Write to another file the converted gray image
+cv2.imwrite('Grey_Image2.jpg', Guava_gray)
+
+#Get the dimensions
+dimensions = Guava_image.shape
+height = Guava_image.shape[0]
+width = Guava_image.shape[1]
+channels = Guava_image.shape[2]
+
+#Printing the dimensions
+print("Dimensions of Guava :")
+print('Image Dimension    : ',dimensions)
+print('Image Height       : ',height)  
+print('Image Width        : ',width)  
+print('Number of Channels : ',channels)  
+ 
